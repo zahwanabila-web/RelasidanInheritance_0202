@@ -35,3 +35,9 @@ public:
         return "Hallo, nama saya " + nama + " dari sekolah " + sekolah + "\n\n";
     }
 };
+
+int main()
+{
+
+    pelajar siswa1("andi laksono", "SMAN 1 Bantul");
+}
