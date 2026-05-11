@@ -48,3 +48,37 @@ void pasien::cetakDokter() {
     cout << endl;
 }
 
+void dokter::tambahpasien(pasien* pPasien) {
+    daftar_pasien.push_back(pPasien);
+    pPasien->tambahDokter(this);
+}
+
+void dokter::cetakpasien() {
+    cout << "Daftar pasien dari Dokter \"" << this->nama << "\":\n";
+    for (auto& a : daftar_pasien)
+    {
+        cout << a->nama << "\n";
+    }
+    cout << endl;
+}
+
+int main()
+{
+
+    dokter*varDokter1 = new dokter("dr. Budi");
+    dokter*varDokter2 = new dokter("dr. Tono");
+    pasien*varpasien1 = new pasien("Andi");
+    pasien*varpasien2 = new pasien("Lia");
+
+    varDokter1->tambahpasien(varpasien1);
+    varDokter1->tambahpasien(varpasien2);
+    varDokter2->tambahpasien(varpasien1);
+
+    varDokter1->cetakpasien();
+    varDokter2->cetakpasien();
+    varpasien1->cetakDokter();
+    varpasien2->cetakDokter();
+
+    return 0;
+    
+}
