@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 #ifndef ANAK_H
 #define ANAK_H
 
@@ -6,7 +8,7 @@ public:
 
     string nama;
 
-    anak(string pnama) : nama(pnama) {
+    anak(string pNama) : nama(pNama) {
         cout << "Anak \"" << nama << "\" ada \n";
    }
 
