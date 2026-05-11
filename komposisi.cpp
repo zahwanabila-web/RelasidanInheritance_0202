@@ -5,3 +5,10 @@ using namespace std;
 #include "jantung.h"
 #include "manusia.h"
 
+int main()
+{
+    Manusia* varManusia =  new Manusia("jono");
+    
+    delete varManusia;
+    return 0;
+}
