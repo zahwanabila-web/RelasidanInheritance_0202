@@ -26,4 +26,8 @@ public:
     pelajar(string pNama, string pSekolah) :orang(pNama), sekolah(pSekolah) {
         cout << "pelajar dibuang\n" << endl;
     }
+
+    ~pelajar() {
+        cout << "pelajar dihapus\n" << endl;
+    }
 };
